@@ -87,19 +87,19 @@
 				//this.index
 				this.index++;
 				if(this.index >= this.groupData.length-1){
-					this.nextBtn.addClass("disabled").removeClass("lightbox-next-show");
+					this.nextBtn.addClass("disabled").removeClass("lightbox-next-btn-show");
 				}
 				if(this.index != 0){
 					this.prevBtn.removeClass("disabled");
 				}
 				
 				var src=this.groupData[this.index].src;
-				//console.log(this.index);
+				console.log(this.index);
 				this.loadPicSize(src);
 			}else if(dir==="prev"){
 				this.index--;
 				if(this.index<=0){
-					this.prevBtn.addClass("disabled").removeClass("lightbox-prev-show");
+					this.prevBtn.addClass("disabled").removeClass("lightbox-prev-btn-show");
 				}
 				if(this.index != this.groupData.length-1){
 					this.nextBtn.removeClass("disabled");
@@ -191,7 +191,7 @@
 		renderDOM:function(){
 			var strDom='<div class="lightbox-pic-view">'+
 							'<span class="lightbox-btn lightbox-prev-btn"></span>'+
-							'<img class="lightbox-image" src="images/2-2.jpg" >'+
+							'<img class="lightbox-image" src="icon/loading.gif" >'+
 							'<span class="lightbox-btn lightbox-next-btn"></span>'+
 						'</div>'+
 						'<div class="lightbox-pic-caption">'+
