@@ -78,7 +78,18 @@
 										e.stopPropagation();
 										self.goto("prev");
 										}
-									});;		
+									});
+		$(window).keyup(function(e){
+			var keyValue=e.which;
+			//console.log(keyValue);
+			//if(self.clear){
+				if(keyValue==38 || keyValue==37){
+					self.prevBtn.click();
+				}else if(keyValue==40 || keyValue==39){
+					self.nextBtn.click();
+				}
+			//}
+		});
 	};
 	LightBox.prototype={
 		goto:function(dir){
